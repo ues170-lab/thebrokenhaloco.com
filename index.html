@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken But Breathing | Eric Lee Sanders — July 23, 2026</title>
+  <meta name="description" content="Broken But Breathing: A Memoir of Addiction, Identity, and the Long Way Back by Eric Lee Sanders, CADC II. Launching July 23, 2026. Damage with Discipline. Raw streetwear and tools from Broken Halo Co.">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Broken But Breathing | Eric Lee Sanders">
+  <meta property="og:description" content="Damage with Discipline. Memoir and streetwear for those who know the weight of rebuilding. Launches July 23, 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brokenhaloco.github.io"> <!-- REPLACE THIS LINK with your actual GitHub Pages URL -->
+  <meta property="og:image" content="https://brokenhaloco.github.io/og-image.jpg"> <!-- REPLACE THIS LINK - upload a strong social share image (1200x630) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Broken But Breathing | July 23, 2026">
+  <meta name="twitter:description" content="Raw memoir + streetwear from Eric Lee Sanders. No fake positivity. Damage with Discipline.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --brand-cyan: #00f0ff;
+      --brand-pink: #ff00aa;
+      --brand-bg: #09090b;
+    }
+
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Space Grotesk', system_ui, sans-serif;
+      font-feature-settings: "tnum" 1, "ss01" 1;
+    }
+
+    .section-header {
+      letter-spacing: 3px;
+    }
+
+    /* Glitch Effect */
+    .glitch {
+      position: relative;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #09090b;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 var(--brand-pink);
+      animation: glitch-anim-1 1.8s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      left: -2px;
+      text-shadow: 2px 0 var(--brand-cyan);
+      animation: glitch-anim-2 1.4s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim-1 {
+      0% { clip: rect(10px, 9999px, 30px, 0); }
+      10% { clip: rect(80px, 9999px, 110px, 0); }
+      20% { clip: rect(40px, 9999px, 70px, 0); }
+      30% { clip: rect(120px, 9999px, 150px, 0); }
+      40% { clip: rect(20px, 9999px, 50px, 0); }
+      50% { clip: rect(90px, 9999px, 130px, 0); }
+      60% { clip: rect(60px, 9999px, 95px, 0); }
+      70% { clip: rect(30px, 9999px, 55px, 0); }
+      80% { clip: rect(110px, 9999px, 140px, 0); }
+      90% { clip: rect(5px, 9999px, 25px, 0); }
+      100% { clip: rect(70px, 9999px, 100px, 0); }
+    }
+
+    @keyframes glitch-anim-2 {
+      0% { clip: rect(65px, 9999px, 100px, 0); }
+      15% { clip: rect(25px, 9999px, 55px, 0); }
+      25% { clip: rect(95px, 9999px, 130px, 0); }
+      35% { clip: rect(15px, 9999px, 45px, 0); }
+      45% { clip: rect(75px, 9999px, 105px, 0); }
+      55% { clip: rect(35px, 9999px, 70px, 0); }
+      65% { clip: rect(105px, 9999px, 135px, 0); }
+      75% { clip: rect(10px, 9999px, 40px, 0); }
+      85% { clip: rect(85px, 9999px, 115px, 0); }
+      95% { clip: rect(50px, 9999px, 80px, 0); }
+      100% { clip: rect(120px, 9999px, 155px, 0); }
+    }
+
+    /* Scroll animations */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.7s cubic-bezier(0.23, 1.0, 0.32, 1);
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Timer */
+    .timer-digit {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Card hover */
+    .merch-card {
+      transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), 
+                  border-color 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .merch-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 240, 255, 0.4);
+    }
+
+    /* Form */
+    .form-input {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--brand-cyan);
+      box-shadow: 0 0 0 1px var(--brand-cyan);
+      outline: none;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--brand-cyan);
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background: linear-gradient(to right, var(--brand-cyan), var(--brand-pink));
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    /* Subtle grain texture overlay option (light) */
+    .grain {
+      position: relative;
+    }
+
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 3px 3px;
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: screen;
+    }
+  </style>
+</head>
+<body class="bg-[#09090b] text-white selection:bg-[#ff00aa] selection:text-black">
+
+  <!-- STICKY NAV -->
+  <nav class="sticky top-0 z-50 bg-[#09090b]/95 backdrop-blur-lg border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 flex items-center justify-center">
+          <!-- Cracked Halo SVG Logo -->
+          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:scale-105 transition-transform">
+            <!-- Main halo ring -->
+            <circle cx="50" cy="50" r="38" stroke="#00f0ff" stroke-width="5" stroke-linejoin="round"/>
+            <!-- Cracks -->
+            <path d="M32 22 Q42 35 28 48" stroke="#ff00aa" stroke-width="4" stroke-linecap="round"/>
+            <path d="M68 18 Q58 32 72 46" stroke="#ff00aa" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 55 Q35 48 25 72" stroke="#ff00aa" stroke-width="3" stroke-linecap="round"/>
+            <path d="M75 58 Q62 50 78 75" stroke="#ff00aa" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M45 12 L48 32" stroke="#ff00aa" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Inner accent -->
+            <circle cx="50" cy="50" r="8" stroke="#00f0ff" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-display text-[21px] font-semibold tracking-[-1.5px] leading-none">BROKEN HALO</div>
+          <div class="text-[9px] text-white/40 -mt-0.5 tracking-[2px]">CO.</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-x-9 text-sm tracking-[2px] font-medium">
+        <a href="#story" class="nav-link text-white/80 hover:text-white">STORY</a>
+        <a href="#book" class="nav-link text-white/80 hover:text-white">THE BOOK</a>
+        <a href="#merch" class="nav-link text-white/80 hover:text-white">MERCH</a>
+        <a href="#tools" class="nav-link text-white/80 hover:text-white">TOOLS</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="#book" 
+           class="inline-flex items-center px-5 py-2.5 text-xs tracking-[2.5px] border border-[#00f0ff] text-[#00f0ff] hover:bg-[#00f0ff] hover:text-black font-medium transition-colors">
+          PRE-ORDER
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn"
+              class="md:hidden w-10 h-10 flex items-center justify-center text-white/70 hover:text-white transition"
+              aria-label="Toggle menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-[#09090b]">
+      <div class="px-6 py-8 flex flex-col gap-y-5 text-sm tracking-[1.5px]">
+        <a href="#story" class="mobile-nav-link py-1 text-white/80 active:text-white">STORY</a>
+        <a href="#book" class="mobile-nav-link py-1 text-white/80 active:text-white">THE BOOK</a>
+        <a href="#merch" class="mobile-nav-link py-1 text-white/80 active:text-white">MERCH</a>
+        <a href="#tools" class="mobile-nav-link py-1 text-white/80 active:text-white">TOOLS</a>
+        <div class="pt-4 border-t border-white/10">
+          <a href="#book" 
+             class="block w-full text-center py-3.5 text-xs tracking-[3px] border border-[#00f0ff] text-[#00f0ff] active:bg-[#00f0ff] active:text-black font-medium transition-colors">
+            PRE-ORDER THE BOOK
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="min-h-[100dvh] flex items-center justify-center px-6 pt-8 pb-16 relative overflow-hidden grain">
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <!-- Tagline -->
+      <div class="inline-flex items-center gap-2 mb-6 px-4 py-1 rounded-full border border-white/10 text-xs tracking-[3px] text-white/60">
+        <div class="w-1.5 h-1.5 bg-[#ff00aa] rounded-full animate-pulse"></div>
+        BROKEN HALO CO. × ERIC LEE SANDERS
+      </div>
+
+      <!-- Glitch Title -->
+      <h1 class="glitch text-[72px] md:text-[92px] lg:text-[108px] leading-[0.86] font-display tracking-[-5.5px] mb-3"
+          data-text="BROKEN BUT BREATHING">
+        BROKEN BUT<br>BREATHING
+      </h1>
+
+      <p class="max-w-md mx-auto text-2xl md:text-3xl text-white/70 tracking-tight font-light">
+        A Memoir of Addiction, Identity,<br>and the Long Way Back
+      </p>
+
+      <!-- Tagline -->
+      <div class="mt-5 mb-8">
+        <span class="font-display text-[#ff00aa] text-xl tracking-[5px] font-semibold">DAMAGE WITH DISCIPLINE</span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="mb-10">
+        <div class="text-[10px] tracking-[3px] text-white/50 mb-3">LAUNCHES JULY 23, 2026</div>
+        
+        <div id="countdown" 
+             class="grid grid-cols-4 gap-2 sm:gap-3 max-w-[460px] mx-auto">
+          <div class="bg-zinc-950 border border-white/10 rounded-2xl py-3 px-2 text-center">
+            <div id="days" class="timer-digit text-5xl sm:text-6xl font-semibold tabular-nums tracking-tighter">33</div>
+            <div class="text-[9px] text-white/50 tracking-[2.5px] mt-1">DAYS</div>
+          </div>
+          <div class="bg-zinc-950 border border-white/10 rounded-2xl py-3 px-2 text-center">
+            <div id="hours" class="timer-digit text-5xl sm:text-6xl font-semibold tabular-nums tracking-tighter">00</div>
+            <div class="text-[9px] text-white/50 tracking-[2.5px] mt-1">HOURS</div>
+          </div>
+          <div class="bg-zinc-950 border border-white/10 rounded-2xl py-3 px-2 text-center">
+            <div id="minutes" class="timer-digit text-5xl sm:text-6xl font-semibold tabular-nums tracking-tighter">00</div>
+            <div class="text-[9px] text-white/50 tracking-[2.5px] mt-1">MINUTES</div>
+          </div>
+          <div class="bg-zinc-950 border border-white/10 rounded-2xl py-3 px-2 text-center">
+            <div id="seconds" class="timer-digit text-5xl sm:text-6xl font-semibold tabular-nums tracking-tighter">00</div>
+            <div class="text-[9px] text-white/50 tracking-[2.5px] mt-1">SECONDS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#book"
+           class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-[17px] border border-[#00f0ff] text-[#00f0ff] hover:bg-[#00f0ff] hover:text-black font-display text-sm tracking-[3px] transition-all active:scale-[0.985]">
+          PRE-ORDER THE BOOK
+        </a>
+        <a href="#merch"
+           class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-[17px] bg-[#ff00aa] text-black hover:bg-white font-display text-sm tracking-[3px] transition-all active:scale-[0.985]">
+          SHOP THE FIRST DROP
+        </a>
+      </div>
+
+      <div class="mt-8 text-[10px] text-white/40 tracking-widest">LAMONT, KERN COUNTY, CALIFORNIA</div>
+    </div>
+
+    <!-- Subtle bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#09090b] to-transparent pointer-events-none"></div>
+  </header>
+
+  <!-- AUTHOR STORY -->
+  <section id="story" class="max-w-3xl mx-auto px-6 pt-8 pb-20 scroll-animate">
+    <div class="text-center mb-10">
+      <div class="text-[#00f0ff] text-xs tracking-[4px] mb-2">THE DAMAGE &amp; THE DISCIPLINE</div>
+      <h2 class="font-display text-6xl tracking-[-2.5px] leading-none">I am still here.<br>That means something.</h2>
+    </div>
+
+    <div class="prose prose-invert max-w-none text-[17px] leading-relaxed text-white/80 space-y-6">
+      <p>I didn’t survive to become inspirational. I survived because I refused to let the thing that tried to kill me win. Addiction took years. Prison took more. Relapse after relapse taught me how easy it is to go back to zero. I lost time with my daughters, lost pieces of myself, and spent too many nights staring at options that all looked like destruction.</p>
+      
+      <p>There was no clean redemption arc. No single moment where everything clicked and I became someone new. There was only the choice, repeated: keep breathing and do the work, or stop. I chose to keep breathing. Then I chose it again the next day. And the next.</p>
+      
+      <p class="font-medium text-white">Broken But Breathing is the record of that choice — without the filter, without the performance, without pretending the damage never happened. Broken Halo Co. exists for the same reason. Streetwear for people who know what it costs to stay standing. No fake strength. No corny slogans. Just the truth and what you build when you decide you’re not done yet.</p>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-y-3 text-sm">
+      <div>
+        <div class="font-medium">Eric Lee Sanders, CADC II</div>
+        <div class="text-white/50 text-xs tracking-wider">Lamont, Kern County, California</div>
+      </div>
+      <div class="sm:ml-auto text-xs text-white/40 max-w-[240px] sm:text-right">Founder, Broken Halo Co.<br>Author, Broken But Breathing</div>
+    </div>
+  </section>
+
+  <!-- BOOK SECTION -->
+  <section id="book" class="border-y border-white/10 bg-zinc-950/60 py-16 scroll-animate">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-x-16 gap-y-12 items-center">
+        
+        <!-- Book Mock -->
+        <div class="mx-auto w-full max-w-[280px]">
+          <div class="aspect-[3/4] bg-[#111113] border border-white/10 rounded-3xl p-7 flex flex-col relative overflow-hidden shadow-2xl">
+            <!-- Top accent -->
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00f0ff] via-[#ff00aa] to-[#00f0ff]"></div>
+            
+            <!-- Halo -->
+            <div class="mx-auto mt-6 mb-5">
+              <svg width="78" height="78" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="34" stroke="#00f0ff" stroke-width="4"/>
+                <path d="M30 24 Q40 37 27 50" stroke="#ff00aa" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M70 20 Q60 34 73 48" stroke="#ff00aa" stroke-width="3" stroke-linecap="round"/>
+                <path d="M23 58 Q36 50 24 75" stroke="#ff00aa" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M77 60 Q63 52 79 78" stroke="#ff00aa" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="7" stroke="#00f0ff" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="text-center flex-1 flex flex-col justify-center">
+              <div class="font-display text-[27px] leading-[0.95] tracking-[-1.8px] font-semibold mb-1">BROKEN BUT<br>BREATHING</div>
+              <div class="text-xs tracking-[3px] text-white/50 mb-5">A MEMOIR</div>
+              
+              <div class="mt-auto">
+                <div class="text-sm font-medium tracking-tight">ERIC LEE SANDERS</div>
+                <div class="text-[10px] text-white/40 tracking-widest mt-px">CADC II</div>
+              </div>
+            </div>
+
+            <div class="text-center mt-auto pt-5 border-t border-white/10">
+              <div class="text-[10px] text-white/50 tracking-[1.5px]">BROKEN HALO CO. • 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Info -->
+        <div>
+          <div class="uppercase text-xs tracking-[3.5px] text-[#00f0ff] mb-2">JULY 23, 2026</div>
+          <h3 class="font-display text-5xl tracking-[-2.2px] leading-none mb-6">Broken But Breathing</h3>
+          
+          <p class="text-lg text-white/70 max-w-prose">The unflinching account of addiction, identity, incarceration, and what it actually takes to keep breathing when everything tells you to stop. Written from lived experience — not theory.</p>
+
+          <div class="mt-8 grid grid-cols-2 gap-x-8 text-sm">
+            <div>
+              <div class="text-white/40 text-xs tracking-widest mb-px">ISBN</div>
+              <div class="font-mono tracking-tight">979-8-2579-5965-3</div>
+            </div>
+            <div>
+              <div class="text-white/40 text-xs tracking-widest mb-px">PUBLISHER</div>
+              <div>Broken Halo Co.</div>
+            </div>
+          </div>
+
+          <div class="mt-9">
+            <a href="#" 
+               class="inline-flex items-center justify-center w-full md:w-auto px-10 py-4 border border-white/70 hover:border-white hover:bg-white hover:text-black transition font-display tracking-[3px] text-sm active:scale-[0.985]">
+              <!-- REPLACE THIS LINK -->
+              PRE-ORDER ON AMAZON KDP
+            </a>
+            <div class="text-[10px] text-white/40 mt-3 tracking-wider">Paperback • Ebook available at launch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCH SECTION -->
+  <section id="merch" class="max-w-7xl mx-auto px-6 py-20 scroll-animate">
+    <div class="text-center mb-12">
+      <div class="text-[#ff00aa] text-xs tracking-[4px] mb-2">FIRST DROP</div>
+      <h3 class="font-display text-6xl tracking-[-2.5px]">Wear the damage.<br>Choose the discipline.</h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Neon Halo Edition -->
+      <div class="merch-card bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+        <div class="aspect-square bg-[#0a0a0c] flex items-center justify-center relative p-8">
+          <svg width="160" height="160" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="36" stroke="#00f0ff" stroke-width="5"/>
+            <path d="M28 20 Q40 35 25 50" stroke="#ff00aa" stroke-width="5" stroke-linecap="round"/>
+            <path d="M72 18 Q58 34 75 49" stroke="#ff00aa" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M20 56 Q35 47 22 74" stroke="#ff00aa" stroke-width="4" stroke-linecap="round"/>
+            <path d="M80 58 Q63 48 82 76" stroke="#ff00aa" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="9" stroke="#00f0ff" stroke-width="2" fill="none"/>
+          </svg>
+          <div class="absolute bottom-5 right-5 text-[9px] px-3 py-px border border-[#00f0ff]/60 text-[#00f0ff] tracking-widest">NEON</div>
+        </div>
+        <div class="p-7 flex-1 flex flex-col">
+          <div>
+            <div class="font-display text-3xl tracking-[-1.5px] leading-none">Neon Halo Edition</div>
+            <div class="text-xs text-white/50 mt-1 tracking-[1px]">T-SHIRT • BLACK / ELECTRIC</div>
+          </div>
+          <p class="text-sm text-white/60 mt-4 flex-1">Cracked halo. Electric veins. For those who survived the voltage and refused to dim.</p>
+          
+          <div class="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
+            <div>
+              <span class="text-xs text-white/40">PRE-ORDER</span><br>
+              <span class="font-mono text-lg tabular-nums">$35</span>
+            </div>
+            <a href="#" 
+               class="text-sm px-6 py-2.5 border border-[#00f0ff] text-[#00f0ff] hover:bg-[#00f0ff] hover:text-black transition text-xs tracking-widest active:scale-[0.985]">
+              <!-- REPLACE THIS LINK -->
+              SHOP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sober Not Soft -->
+      <div class="merch-card bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+        <div class="aspect-square bg-[#0a0a0c] flex items-center justify-center relative p-8">
+          <div class="text-center">
+            <div class="font-display text-[42px] leading-none tracking-[-3px] text-white">SOBER</div>
+            <div class="font-display text-[42px] leading-none tracking-[-3px] -mt-2 text-[#ff00aa]">NOT SOFT</div>
+            <div class="mt-3 text-[10px] tracking-[4px] text-white/40">STREETWEAR CLASSIC</div>
+          </div>
+          <div class="absolute top-6 right-6 w-8 h-[1px] bg-white/30"></div>
+        </div>
+        <div class="p-7 flex-1 flex flex-col">
+          <div>
+            <div class="font-display text-3xl tracking-[-1.5px] leading-none">Sober Not Soft</div>
+            <div class="text-xs text-white/50 mt-1 tracking-[1px]">T-SHIRT • BLACK / PINK</div>
+          </div>
+          <p class="text-sm text-white/60 mt-4 flex-1">Recovery doesn’t make you fragile. It makes you dangerous to your old patterns. Wear it loud.</p>
+          
+          <div class="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
+            <div>
+              <span class="text-xs text-white/40">PRE-ORDER</span><br>
+              <span class="font-mono text-lg tabular-nums">$35</span>
+            </div>
+            <a href="#" 
+               class="text-sm px-6 py-2.5 border border-[#ff00aa] text-[#ff00aa] hover:bg-[#ff00aa] hover:text-black transition text-xs tracking-widest active:scale-[0.985]">
+              <!-- REPLACE THIS LINK -->
+              SHOP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Defective by Design -->
+      <div class="merch-card bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+        <div class="aspect-square bg-[#0a0a0c] flex flex-col items-center justify-center relative p-8">
+          <div class="text-center mb-1">
+            <div class="font-display text-4xl tracking-[-2.5px] leading-none">DEFECTIVE</div>
+            <div class="font-display text-4xl tracking-[-2.5px] text-[#00f0ff] -mt-1">BY DESIGN</div>
+          </div>
+          <div class="flex gap-1 mt-4">
+            <div class="w-2.5 h-px bg-white/40"></div>
+            <div class="w-2.5 h-px bg-white/40"></div>
+            <div class="w-2.5 h-px bg-white/40"></div>
+          </div>
+          <div class="absolute bottom-7 text-[9px] tracking-[3px] text-white/30">REBUILT BY CHOICE</div>
+        </div>
+        <div class="p-7 flex-1 flex flex-col">
+          <div>
+            <div class="font-display text-3xl tracking-[-1.5px] leading-none">Defective by Design</div>
+            <div class="text-xs text-white/50 mt-1 tracking-[1px]">T-SHIRT • BLACK / CYAN</div>
+          </div>
+          <p class="text-sm text-white/60 mt-4 flex-1">Some of us weren’t built for the standard path. We were built to survive the ones that tried to break us.</p>
+          
+          <div class="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
+            <div>
+              <span class="text-xs text-white/40">PRE-ORDER</span><br>
+              <span class="font-mono text-lg tabular-nums">$35</span>
+            </div>
+            <a href="#" 
+               class="text-sm px-6 py-2.5 border border-[#00f0ff] text-[#00f0ff] hover:bg-[#00f0ff] hover:text-black transition text-xs tracking-widest active:scale-[0.985]">
+              <!-- REPLACE THIS LINK -->
+              SHOP
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 text-xs text-white/40 tracking-widest">ALL PIECES DROPPING WITH THE BOOK • JULY 23</div>
+  </section>
+
+  <!-- FREE TOOLS / EMAIL CAPTURE -->
+  <section id="tools" class="border-t border-white/10 py-16 scroll-animate">
+    <div class="max-w-xl mx-auto px-6 text-center">
+      <div class="text-[#00f0ff] text-xs tracking-[3.5px] mb-2">NO FLUFF. NO FAKE HOPE.</div>
+      <h4 class="font-display text-5xl tracking-[-2px] leading-none mb-4">Tools for the rebuild.</h4>
+      <p class="text-white/70 max-w-sm mx-auto">Worksheets, guilt &amp; shame prompts, and the Notion companion I actually use. Straight from the pages of the memoir and the work that kept me breathing.</p>
+
+      <!-- Form -->
+      <form id="tools-form" action="https://formspree.io/f/xrewzzen" method="POST" class="mt-9">
+        <div class="bg-zinc-950 border border-white/10 rounded-3xl p-7">
+          <div class="space-y-3">
+            <input type="text" name="name" placeholder="First name (optional)" 
+                   class="form-input w-full bg-black border border-white/15 text-white placeholder:text-white/40 px-5 py-3.5 rounded-2xl text-sm">
+            
+            <input type="email" name="email" placeholder="Your email address" required 
+                   class="form-input w-full bg-black border border-white/15 text-white placeholder:text-white/40 px-5 py-3.5 rounded-2xl text-sm">
+
+            <input type="hidden" name="_subject" value="New Broken Halo Launch Signup">
+            
+            <button type="submit"
+                    class="w-full mt-2 py-[17px] bg-white text-black font-display tracking-[3px] text-sm active:bg-[#ff00aa] active:text-white transition rounded-2xl">
+              SEND ME THE FREE TOOLS
+            </button>
+          </div>
+          <div class="text-[10px] text-white/40 mt-4 tracking-wider">We respect your inbox. Unsubscribe anytime.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="border-t border-white/10 py-20 scroll-animate">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="font-display text-[56px] md:text-[68px] leading-[0.9] tracking-[-3.2px] mb-6">
+        STILL BREATHING.<br>STILL BUILDING.
+      </div>
+      <p class="text-xl text-white/60 max-w-xs mx-auto">The book drops July 23.<br>The work continues every day after.</p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center mt-10">
+        <a href="#book" class="px-9 py-4 border border-white/60 hover:bg-white hover:text-black transition font-display tracking-[2.5px] text-sm">GET THE BOOK</a>
+        <a href="#merch" class="px-9 py-4 bg-[#ff00aa] text-black hover:bg-white transition font-display tracking-[2.5px] text-sm">JOIN THE FIRST DROP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-9 text-xs text-white/50">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-y-5 text-center md:text-left">
+      <div>
+        © 2026 Broken Halo Co. • Lamont, Kern County, CA<br>
+        <span class="text-white/30">Eric Lee Sanders, CADC II • Independent imprint</span>
+      </div>
+
+      <div class="flex justify-center md:justify-end items-center gap-x-7 text-base">
+        <a href="https://instagram.com/brokenhaloco" target="_blank" class="hover:text-[#ff00aa] transition" aria-label="Instagram"><!-- REPLACE THIS LINK --> <i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/brokenhaloco" target="_blank" class="hover:text-[#00f0ff] transition" aria-label="X (Twitter)"><!-- REPLACE THIS LINK --> <i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://tiktok.com/@brokenhaloco" target="_blank" class="hover:text-[#ff00aa] transition" aria-label="TikTok"><!-- REPLACE THIS LINK --> <i class="fa-brands fa-tiktok"></i></a>
+      </div>
+
+      <div class="text-[10px] tracking-widest text-white/30 md:text-right">
+        DAMAGE WITH DISCIPLINE
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tailwind config
+    function initTailwind() {
+      document.documentElement.style.setProperty('--accent-cyan', '#00f0ff');
+      document.documentElement.style.setProperty('--accent-pink', '#ff00aa');
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+              'body': ['Inter', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    }
+
+    // Mobile menu toggle
+    function initMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          btn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+        } else {
+          menu.classList.add('hidden');
+          btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        }
+      });
+
+      // Close menu when clicking a link
+      const mobileLinks = menu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        });
+      });
+    }
+
+    // Countdown Timer to July 23, 2026
+    function initCountdown() {
+      const launchDate = new Date(2026, 6, 23, 0, 0, 0).getTime(); // July 23, 2026 00:00:00 local
+
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      function update() {
+        const now = Date.now();
+        let distance = launchDate - now;
+
+        if (distance < 0) {
+          // Launch day or passed
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+
+    // Intersection Observer for scroll animations
+    function initScrollAnimations() {
+      const animatedElements = document.querySelectorAll('.scroll-animate');
+
+      if (!('IntersectionObserver' in window) || animatedElements.length === 0) {
+        // Fallback: make everything visible
+        animatedElements.forEach(el => el.classList.add('visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Optional: unobserve after animation
+            // observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -60px 0px'
+      });
+
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    // Formspree AJAX submit with success state
+    function initToolsForm() {
+      const form = document.getElementById('tools-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'SENDING...';
+        }
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            form.innerHTML = `
+              <div class="text-center py-8 px-4">
+                <div class="mx-auto w-12 h-12 rounded-full border border-[#00f0ff] flex items-center justify-center mb-5">
+                  <i class="fa-solid fa-check text-[#00f0ff] text-2xl"></i>
+                </div>
+                <div class="font-display text-2xl tracking-tight mb-2 text-white">You're in.</div>
+                <p class="text-white/70 text-sm max-w-[260px] mx-auto">Check your inbox for the free tools. If it doesn't show up in a few minutes, check spam.</p>
+              </div>
+            `;
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText || 'TRY AGAIN';
+          }
+          // Simple error feedback
+          const errorDiv = document.createElement('div');
+          errorDiv.className = 'text-center text-xs text-[#ff00aa] mt-3';
+          errorDiv.textContent = 'Something went wrong. Please try again or email us directly.';
+          form.appendChild(errorDiv);
+          setTimeout(() => errorDiv.remove(), 4500);
+        }
+      });
+    }
+
+    // Keyboard escape for mobile menu
+    function initKeyboardControls() {
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const menu = document.getElementById('mobile-menu');
+          const btn = document.getElementById('mobile-menu-btn');
+          if (menu && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            if (btn) btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+          }
+        }
+      });
+    }
+
+    // Main init
+    function init() {
+      initTailwind();
+      initMobileMenu();
+      initCountdown();
+      initScrollAnimations();
+      initToolsForm();
+      initKeyboardControls();
+
+      // Make sure glitch title is accessible
+      const glitchTitle = document.querySelector('.glitch');
+      if (glitchTitle) {
+        glitchTitle.setAttribute('aria-label', glitchTitle.getAttribute('data-text'));
+      }
+
+      // Optional: console note for production
+      // console.log('%c[Broken Halo] Launch page initialized — production ready.', 'color:#444');
+    }
+
+    // Boot
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
