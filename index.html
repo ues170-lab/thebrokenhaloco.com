@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <title>Broken Halo Co. | Broken But Breathing — July 23, 2026</title>
   <meta name="description" content="Broken Halo Co. is the home of Broken But Breathing by Eric Lee Sanders and the first Damage With Discipline apparel drop: Sober Not Soft, I'm Still Here, Broken But Breathing, I Came I Saw I Dissociated, and Hope Dealer." />
   <meta name="theme-color" content="#09090b" />
@@ -33,6 +35,7 @@
     .reveal.visible{opacity:1;transform:translateY(0)}
     .count-box{font-variant-numeric:tabular-nums}
     .media-card img{background:#050507}
+    .hp-field{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body class="grain bg-[#09090b] text-white selection:bg-[#ff2bbd] selection:text-black">
@@ -84,7 +87,9 @@
           <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/68">Drop your email and get the Broken Halo Guilt + Shame Companion Worksheet immediately. It includes the companion thought prompt, repair vs. punishment work, and evidence-this-week action steps.</p>
           <div class="mt-6 rounded-2xl border border-white/10 bg-white/[.03] p-5 text-sm leading-relaxed text-white/58"><strong class="text-white">How it works:</strong> your email goes to the launch list, then the worksheet download appears on the page and should start automatically. No spam. No motivational glitter bomb.</div>
         </div>
-        <form id="toolsForm" action="https://formspree.io/f/xrewzzen" method="POST" class="rounded-[1.7rem] border border-white/10 bg-zinc-950/80 p-6 shadow-2xl">
+        <form id="toolsForm" action="https://formspree.io/f/xrewzzen" method="POST" class="relative rounded-[1.7rem] border border-white/10 bg-zinc-950/80 p-6 shadow-2xl">
+          <label class="hp-field" for="website">Leave blank</label>
+          <input id="website" class="hp-field" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label class="mb-2 block text-xs font-bold tracking-[.2em] text-white/50" for="name">FIRST NAME <span class="font-normal text-white/30">OPTIONAL</span></label>
           <input id="name" name="name" type="text" autocomplete="given-name" class="mb-4 w-full rounded-2xl border border-white/10 bg-black px-5 py-4 text-white placeholder:text-white/25 focus:border-[#00f0ff] focus:outline-none" placeholder="Eric"/>
           <label class="mb-2 block text-xs font-bold tracking-[.2em] text-white/50" for="email">EMAIL</label>
@@ -93,7 +98,7 @@
           <input type="hidden" name="source" value="thebrokenhaloco.com landing page"/>
           <input type="hidden" name="lead_magnet" value="Guilt + Shame Companion Worksheet"/>
           <button type="submit" class="mt-5 w-full rounded-2xl bg-white px-5 py-4 font-display text-sm font-bold tracking-[.22em] text-black transition hover:bg-[#00f0ff]">GET FREE WORKSHEET</button>
-          <p class="mt-4 text-center text-[11px] leading-relaxed text-white/38">Built for people rebuilding. Unsubscribe anytime.</p>
+          <p class="mt-4 text-center text-[11px] leading-relaxed text-white/38">Built for people rebuilding. <a href="/privacy.html" class="text-white/55 underline decoration-white/20 underline-offset-2 hover:text-[#00f0ff]">Privacy policy</a> · <a href="mailto:u.es170@gmail.com?subject=Unsubscribe%20Broken%20Halo%20Co.%20launch%20list" class="text-white/55 underline decoration-white/20 underline-offset-2 hover:text-[#00f0ff]">Unsubscribe anytime</a>.</p>
           <div id="formMessage" class="mt-4 hidden rounded-2xl border px-4 py-3 text-center text-sm"></div>
           <div id="downloadBox" class="mt-4 hidden rounded-2xl border border-[#00f0ff]/35 bg-[#00f0ff]/10 p-4 text-center">
             <div class="text-xs font-bold tracking-[.24em] text-[#00f0ff]">DOWNLOAD READY</div>
@@ -109,7 +114,7 @@
     <section class="px-5 py-20 text-center sm:px-6 md:py-28"><div class="mx-auto max-w-4xl"><div class="outline-text font-display text-[4rem] font-bold leading-[.82] tracking-[-.08em] sm:text-[6.4rem]">DAMAGED.</div><div class="font-display text-[4rem] font-bold leading-[.82] tracking-[-.08em] text-white sm:text-[6.4rem]">BREATHING.</div><div class="outline-text font-display text-[4rem] font-bold leading-[.82] tracking-[-.08em] sm:text-[6.4rem]">UNDEFEATED.</div><div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><a href="#tools" class="inline-flex justify-center bg-[#ff2bbd] px-8 py-4 font-display text-sm font-bold tracking-[.22em] text-black transition hover:bg-white">GET FREE WORKSHEET</a><a href="#book" class="inline-flex justify-center border border-white/50 px-8 py-4 font-display text-sm font-bold tracking-[.22em] text-white transition hover:bg-white hover:text-black">READ ABOUT THE BOOK</a></div></div></section>
   </main>
 
-  <footer class="border-t border-white/10 px-5 py-8 text-sm text-white/45 sm:px-6"><div class="mx-auto flex max-w-7xl flex-col gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left"><div><div>© 2026 Broken Halo Co. · Kern County, California</div><div class="mt-1 text-xs text-white/30">Broken But Breathing · Damage With Discipline</div></div><div class="flex justify-center gap-5 text-xs font-bold tracking-[.22em] text-white/45 md:justify-end"><a href="https://instagram.com/brokenhaloco" target="_blank" rel="noopener" class="hover:text-[#ff2bbd]">INSTAGRAM</a><a href="https://tiktok.com/@brokenhaloco" target="_blank" rel="noopener" class="hover:text-[#00f0ff]">TIKTOK</a></div></div></footer>
+  <footer class="border-t border-white/10 px-5 py-8 text-sm text-white/45 sm:px-6"><div class="mx-auto flex max-w-7xl flex-col gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left"><div><div>© 2026 Broken Halo Co. · Kern County, California</div><div class="mt-1 text-xs text-white/30">Broken But Breathing · Damage With Discipline</div></div><div class="flex flex-wrap justify-center gap-5 text-xs font-bold tracking-[.22em] text-white/45 md:justify-end"><a href="https://instagram.com/brokenhaloco" target="_blank" rel="noopener" class="hover:text-[#ff2bbd]">INSTAGRAM</a><a href="https://tiktok.com/@brokenhaloco" target="_blank" rel="noopener" class="hover:text-[#00f0ff]">TIKTOK</a><a href="/privacy.html" class="hover:text-white">PRIVACY</a></div></div></footer>
 
   <script>
     tailwind.config={theme:{extend:{fontFamily:{display:["Space Grotesk","Inter","system-ui","sans-serif"]}}}};
@@ -164,6 +169,8 @@
       if(downloadLink){downloadLink.href=leadMagnetUrl;downloadLink.download=leadMagnetFilename}
       form.addEventListener("submit",async event=>{
         event.preventDefault();
+        const honeypot=form.querySelector("input[name='_gotcha']");
+        if(honeypot&&honeypot.value)return;
         const button=form.querySelector("button[type='submit']"),original=button.textContent;
         button.disabled=true;
         button.textContent="SENDING...";
@@ -178,7 +185,7 @@
           if(downloadBox)downloadBox.classList.remove("hidden");
           setTimeout(triggerDownload,150);
         }catch(error){
-          message.textContent="Something went wrong. Try again, or reach out through Instagram.";
+          message.innerHTML='Something went wrong. Try again, or reach out on <a href="https://instagram.com/brokenhaloco" target="_blank" rel="noopener" class="underline underline-offset-2">Instagram</a>.';
           message.className="mt-4 rounded-2xl border border-[#ff2bbd]/40 bg-[#ff2bbd]/10 px-4 py-3 text-center text-sm text-[#ff2bbd]";
         }finally{
           button.disabled=false;
