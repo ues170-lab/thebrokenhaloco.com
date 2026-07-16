@@ -1,25 +1,49 @@
 // Broken Halo Co. — Shopify storefront wiring
 // Marketing site (thebrokenhaloco.com) → Shopify (bhc-1149)
 //
-// When you connect a custom domain to Shopify later, change baseUrl only.
-// Keep password ON until launch; visitors with no password see the password page.
-// Products must be Active (password can stay on) for storefront product pages to resolve.
+// Handles MUST match live Shopify product handles.
+// When password is ON, product links still work for anyone with the password;
+// public visitors hit the password page (expected until launch unlock).
 
 window.SHOP_CONFIG = {
   enabled: true,
-  baseUrl: "https://bhc-1149.myshopify.com",
+  baseUrl: "https://shop.thebrokenhaloco.com",
   firstDropPath: "/collections/first-drop",
-  // If First Drop collection is missing, fall back to all products
   fallbackPath: "/collections/all",
-  collectionCta: "SHOP FIRST DROP",
-  productCta: "SHOP THIS PIECE",
-  // Handles must match Shopify product handles (from import CSV)
+  collectionCta: "SHOP FIRST DROP →",
+  productCta: "SHOP THIS PIECE →",
+  listCta: "JOIN DROP LIST",
+  // Live Shopify handles + retail prices (tees)
   products: {
-    "sober-not-soft": "sober-not-soft",
-    "im-still-here": "im-still-here",
-    "broken-but-breathing": "broken-but-breathing",
-    "dissociated": "i-came-i-saw-i-dissociated",
-    "hope-dealer": "hope-dealer",
-    "powered-by-spite": "powered-by-spite"
+    "im-still-here": {
+      handle: "im-still-here-tee",
+      price: "54.00",
+      label: "Lead Piece"
+    },
+    "broken-but-breathing": {
+      handle: "broken-but-breathing-tee",
+      price: "54.00",
+      label: "Book Tie-in"
+    },
+    "sober-not-soft": {
+      handle: "sober-not-soft-tee",
+      price: "46.00",
+      label: "First Drop"
+    },
+    "hope-dealer": {
+      handle: "hope-dealer-tee",
+      price: "46.00",
+      label: "Limited"
+    },
+    "dissociated": {
+      handle: "i-came-i-saw-i-dissociated-tee",
+      price: "36.00",
+      label: "Dark Humor"
+    },
+    "powered-by-spite": {
+      handle: "powered-by-spite",
+      price: "36.00",
+      label: "Dark Fuel"
+    }
   }
 };
