@@ -9,11 +9,12 @@ window.SHOP_CONFIG = {
   enabled: true,
   baseUrl: "https://shop.thebrokenhaloco.com",
   firstDropPath: "/collections/first-drop",
+  hoodiesPath: "/collections/hoodies",
   fallbackPath: "/collections/all",
   collectionCta: "SHOP FIRST DROP →",
   productCta: "SHOP THIS PIECE →",
   listCta: "JOIN DROP LIST",
-  // Live Shopify handles + retail prices (tees)
+  // Live Shopify handles + retail prices
   products: {
     "im-still-here": {
       handle: "im-still-here-tee",
@@ -44,6 +45,31 @@ window.SHOP_CONFIG = {
       handle: "powered-by-spite",
       price: "36.00",
       label: "Dark Fuel"
+    },
+    "im-still-here-hoodie": {
+      handle: "im-still-here-hoodie",
+      price: "85.00",
+      label: "Hoodie · Lead"
+    },
+    "broken-but-breathing-hoodie": {
+      handle: "broken-but-breathing-hoodie",
+      price: "85.00",
+      label: "Hoodie · Book"
+    },
+    "sober-not-soft-hoodie": {
+      handle: "sober-not-soft-hoodie",
+      price: "78.00",
+      label: "Hoodie"
+    },
+    "hope-dealer-hoodie": {
+      handle: "hope-dealer-hoodie",
+      price: "78.00",
+      label: "Hoodie · Limited"
+    },
+    "dissociated-hoodie": {
+      handle: "i-came-i-saw-i-dissociated-hoodie",
+      price: "75.00",
+      label: "Hoodie · Dark Humor"
     }
   }
 };
