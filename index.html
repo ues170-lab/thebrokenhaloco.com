@@ -240,6 +240,16 @@
         button.setAttribute("aria-expanded","false");
         button.textContent="MENU";
       }));
+      const closeMenu=()=>{
+        if(menu.classList.contains("hidden"))return;
+        menu.classList.add("hidden");
+        button.setAttribute("aria-expanded","false");
+        button.textContent="MENU";
+      };
+      window.addEventListener("scroll",closeMenu,{passive:true});
+      document.addEventListener("click",(event)=>{
+        if(!menu.classList.contains("hidden")&&!menu.contains(event.target)&&event.target!==button){closeMenu()}
+      });
     }
 
     function initReveal(){
