@@ -2,7 +2,7 @@
 window.SHOP_CONFIG = {
   enabled: true,
   baseUrl: "https://shop.thebrokenhaloco.com",
-  firstDropPath: "/collections/first-drop",
+  firstDropPath: "/",
   hoodiesPath: "/collections/hoodies",
   fallbackPath: "/",
   collectionCta: "SHOP THE THREE →",
