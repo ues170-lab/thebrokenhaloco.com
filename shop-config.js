@@ -1,11 +1,11 @@
-﻿// Broken Halo Co. — Launch: 3 Ninja POD SKUs only
+﻿// Broken Halo Co. — Live collection: three tees and the STILL HERE hoodie
 window.SHOP_CONFIG = {
   enabled: true,
   baseUrl: "https://shop.thebrokenhaloco.com",
-  firstDropPath: "/",
+  firstDropPath: "/collections/first-drop",
   hoodiesPath: "/collections/hoodies",
   fallbackPath: "/",
-  collectionCta: "SHOP THE THREE →",
+  collectionCta: "SHOP THE COLLECTION →",
   productCta: "SHOP THIS PIECE →",
   listCta: "JOIN DROP LIST",
   products: {
