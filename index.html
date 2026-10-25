@@ -479,7 +479,7 @@
         const priceEl=card.querySelector(".shop-price");
         if(priceEl&&prod.price){
           const n=Number(prod.price);
-          priceEl.textContent=isNaN(n)?"$"+prod.price:"$"+n.toFixed(0);
+          priceEl.textContent=isNaN(n)?"$"+prod.price:"$"+n.toFixed(Number.isInteger(n)?0:2);
         }
         const link=card.querySelector(".shop-product-link");
         if(link){
