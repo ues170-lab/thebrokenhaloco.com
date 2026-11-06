@@ -44,7 +44,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 .photo-frame{position:relative;isolation:isolate;padding:13px;border:1px solid #565656;background:#151616;box-shadow:inset 0 0 0 5px #080909}
 .photo-frame:after{content:'';position:absolute;inset:7px;border:1px solid #a6a6a644;pointer-events:none;z-index:2}
 .photo-frame:before{content:'';position:absolute;top:7px;left:7px;width:30px;height:3px;background:#ff2bbd;z-index:3}
-.route-wear img{transform:scale(1.18);object-position:50% 48%;filter:grayscale(1)}
+.route-wear img{transform:scale(1.18);object-position:50% 48%;filter:none}
 .route-tool img{transform:scale(1.05);object-fit:cover}
 .route-book.photo-frame img{padding:19px 20px 32px}
 @media(max-width:600px){.photo-frame{padding:10px}}
