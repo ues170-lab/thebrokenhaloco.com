@@ -93,7 +93,7 @@
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Broken Halo Co. — Broken But Breathing. I'm Still Here." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{--cyan:#00f0ff;--pink:#ff2bbd;--bg:#09090b}
@@ -139,6 +139,7 @@
     @media(max-width:639px){main h2.font-display{font-size:clamp(1.8rem,9vw,3rem)}main h3.font-display{font-size:clamp(1.25rem,7vw,1.875rem)}.hoodie-copy h2.font-display{font-size:17vw}#toolsForm button{font-size:.65rem;letter-spacing:.12em;padding-left:.75rem;padding-right:.75rem}main a,main button{overflow-wrap:anywhere}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none;transform:none}.card-hover{transition:none}}
   </style>
+  <link rel="stylesheet" href="editorial.css" />
 </head>
 <body class="grain bg-[#09090b] text-white selection:bg-[#ff2bbd] selection:text-black">
   <nav class="sticky top-0 z-40 border-b border-white/10 bg-[#09090b]/90 backdrop-blur-xl">
@@ -155,20 +156,30 @@
   </nav>
 
   <main id="top">
-    <section class="relative overflow-hidden px-5 pb-20 pt-14 sm:px-6 md:pb-28 md:pt-20">
-      <div class="absolute inset-x-0 top-0 -z-10 mx-auto h-72 max-w-5xl rounded-full bg-[#00f0ff]/10 blur-3xl"></div>
-      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
-        <div class="text-center lg:text-left">
-          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.03] px-4 py-1.5 text-[11px] font-semibold tracking-[.24em] text-white/60"><span class="h-1.5 w-1.5 rounded-full bg-[#ff2bbd]"></span>THE BOOK. THE STREETWEAR. STILL HERE.</div>
-          <h1 class="font-display text-[4.6rem] font-bold leading-[.82] tracking-[-.09em] sm:text-[6rem] md:text-[7.5rem]">BROKEN<br/>BUT<br/><span class="text-[#00f0ff] halo-glow">BREATHING</span></h1>
-          <p class="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-white/72 lg:mx-0">Start with <strong class="text-white">Broken But Breathing</strong>, a memoir by Eric Lee Sanders about identity, addiction, and what survives. Explore practical recovery tools and dark streetwear for people still here and still building.</p>
-          <div class="mt-7 flex flex-col items-center gap-4 lg:items-start"><a id="heroAmazonCta" href="https://www.amazon.com/dp/B0H9G1YHST" target="_blank" rel="noopener noreferrer" class="amazon-cta inline-flex justify-center bg-[#ff2bbd] px-8 py-4 font-display text-sm font-bold tracking-[.16em] text-black transition hover:bg-white">READ BROKEN BUT BREATHING</a><a href="downloads/guilt-and-shame-companion.html" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white/75 underline decoration-white/30 underline-offset-4 transition hover:text-[#00f0ff]">Get the free guilt + shame worksheet →</a></div>
-          <div class="mt-8 inline-flex items-center gap-3 rounded-full border border-[#00f0ff]/30 bg-[#00f0ff]/10 px-6 py-3"><span class="h-2 w-2 rounded-full bg-[#00f0ff] animate-pulse"></span><span class="font-display text-sm font-bold tracking-[.22em] text-[#00f0ff]">BOOK + FIRST DROP LIVE NOW</span></div><div class="mt-3 text-sm tracking-[.15em] text-white/50">SEVEN TEES + THE STILL HERE. HOODIE</div>
-        </div>
-        <div class="mx-auto w-full max-w-md lg:max-w-lg"><div class="relative rounded-[2rem] border border-white/10 bg-zinc-950/80 p-5 shadow-2xl"><div class="absolute -inset-px -z-10 rounded-[2rem] bg-gradient-to-br from-[#00f0ff]/30 via-transparent to-[#ff2bbd]/25 blur-xl"></div><div class="rounded-[1.5rem] border border-white/10 bg-black p-4" id="heroCoverWrap"><img id="heroCoverImage" src="book-cover-front.webp?v=20260723" alt="Broken But Breathing book cover by Eric Lee Sanders" class="w-full rounded-[1.2rem] border border-white/10 shadow-2xl"/><p id="heroBookPlaceholder" class="mt-4 text-center text-xs tracking-[.18em] text-white/35">PAPERBACK OUT NOW</p><a id="heroCoverCta" href="#" target="_blank" rel="noopener noreferrer" class="amazon-cta mt-4 hidden w-full justify-center rounded-xl border border-[#ff2bbd] px-4 py-3 font-display text-xs font-bold tracking-[.2em] text-[#ff2bbd] transition hover:bg-[#ff2bbd] hover:text-black inline-flex">BUY NOW</a></div></div></div>
+    <section class="editorial-hero" aria-labelledby="opening-title">
+      <div class="editorial-copy">
+        <p class="editorial-kicker">BROKEN HALO CO. / MEMOIR · STREETWEAR · TOOLS</p>
+        <h1 id="opening-title">STILL HERE.<br><span>STILL BUILDING.</span></h1>
+        <p>The book. The streetwear. The work.<br>Choose your way into Broken Halo Co.</p>
+        <a id="heroAmazonCta" class="amazon-cta editorial-button" href="https://www.amazon.com/dp/B0H9G1YHST" target="_blank" rel="noopener noreferrer">READ BROKEN BUT BREATHING →</a>
+        <a class="editorial-secondary" href="#choose-your-way">EXPLORE READ / WEAR / USE ↓</a>
       </div>
+      <img class="editorial-photo" src="assets/still-here-hoodie-back-1200.webp" alt="Back view of the Still Here hoodie with its cyan, magenta and white artwork in a concrete parking structure — styling mockup" width="1200" height="1490" fetchpriority="high">
     </section>
-
+    <section id="choose-your-way" class="route-grid" aria-label="Read, Wear, Use">
+      <article class="route-card">
+        <a class="route-visual route-book" href="#book" aria-label="Explore Broken But Breathing"><img src="book-cover-front.webp" alt="Broken But Breathing by Eric Lee Sanders" width="600" height="900" loading="lazy"></a>
+        <div class="route-copy"><span class="editorial-kicker">01 / THE STORY</span><h2>READ</h2><p>The memoir. The reality.<br>The story beneath the message.</p><a href="#book">EXPLORE THE BOOK →</a></div>
+      </article>
+      <article class="route-card">
+        <a class="route-visual" href="#hoodies" aria-label="Explore Broken Halo apparel"><img src="assets/still-here-hoodie-back-640.webp" alt="Still Here black hoodie with the current back artwork" width="640" height="795" loading="lazy"></a>
+        <div class="route-copy"><span class="editorial-kicker">02 / THE EXPRESSION</span><h2>WEAR</h2><p>Dark streetwear for people<br>still here and still building.</p><a href="#hoodies">EXPLORE THE APPAREL →</a></div>
+      </article>
+      <article class="route-card">
+        <a class="route-visual route-tool" href="downloads/guilt-and-shame-companion.html" aria-label="Open the free guilt and shame worksheet"><div class="worksheet-sheet"><span>BROKEN HALO INSTITUTE</span><strong>GUILT +<br>SHAME</strong><b>COMPANION WORKSHEET</b><hr><p>Name what happened.<br>Make room for the next step.</p><i></i><i></i><i></i><small>FREE / NO SIGNUP</small></div></a>
+        <div class="route-copy"><span class="editorial-kicker">03 / THE WORK</span><h2>USE</h2><p>Practical reflection tools.<br>One workable next step.</p><a href="downloads/guilt-and-shame-companion.html">OPEN THE FREE WORKSHEET →</a></div>
+      </article>
+    </section>
 
     <section id="hoodies" class="hoodie-feature" aria-labelledby="hoodie-title">
       <div class="hoodie-layout">
@@ -193,36 +204,6 @@
     </section>
 
     <section class="border-y border-white/10 bg-black/30 px-5 py-10 sm:px-6"><div class="mx-auto grid max-w-7xl gap-4 text-center md:grid-cols-3"><div class="rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="font-display text-3xl font-bold tracking-[-.05em] text-[#00f0ff]">NO FAKE HOPE</div><p class="mt-2 text-sm leading-relaxed text-white/55">This is not recovery-poster energy. It is survival language without the costume.</p></div><div class="rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="font-display text-3xl font-bold tracking-[-.05em] text-[#ff2bbd]">TOOLS THAT HIT</div><p class="mt-2 text-sm leading-relaxed text-white/55">Worksheets, prompts, and rebuild frameworks tied to the book — not generic filler.</p></div><div class="rounded-3xl border border-white/10 bg-white/[.03] p-6"><div class="font-display text-3xl font-bold tracking-[-.05em] text-white">FIRST DROP</div><p class="mt-2 text-sm leading-relaxed text-white/55">Streetwear built around scars, discipline, dark humor, and still being here.</p></div></div></section>
-
-    <section class="px-5 py-16 sm:px-6 md:py-20" aria-labelledby="ecosystem-title">
-      <div class="mx-auto max-w-7xl">
-        <div class="mx-auto max-w-3xl text-center">
-          <div class="mb-3 text-xs font-bold tracking-[.3em] text-[#00f0ff]">ONE STORY. THREE WAYS INTO IT.</div>
-          <h2 id="ecosystem-title" class="font-display text-4xl font-bold leading-[.95] tracking-[-.07em] sm:text-5xl">READ IT. WEAR IT. USE IT.</h2>
-          <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/62 sm:text-lg">Eric Lee Sanders is the voice. <strong class="text-white">Broken But Breathing</strong> is the story. Broken Halo Co. carries the message into public life. Broken Halo Institute carries the work into education and practice.</p>
-        </div>
-        <div class="mt-10 grid gap-5 md:grid-cols-3">
-          <article class="rounded-3xl border border-white/10 bg-white/[.03] p-7">
-            <div class="text-[10px] font-bold tracking-[.28em] text-[#ff2bbd]">READ IT</div>
-            <h3 class="mt-3 font-display text-3xl font-bold tracking-[-.05em]">THE STORY</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/60"><strong class="text-white">Broken But Breathing</strong> is the raw memoir underneath the work—addiction, identity, relapse, shame, and rebuilding without the polished redemption arc.</p>
-            <a href="#book" class="mt-6 inline-flex text-xs font-bold tracking-[.2em] text-[#ff2bbd]">READ ABOUT THE BOOK →</a>
-          </article>
-          <article class="rounded-3xl border border-white/10 bg-white/[.03] p-7">
-            <div class="text-[10px] font-bold tracking-[.28em] text-white/60">WEAR IT</div>
-            <h3 class="mt-3 font-display text-3xl font-bold tracking-[-.05em]">THE PROOF</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/60">Broken Halo Co. turns survival language into dark streetwear for people who do not need their damage turned into a cute slogan.</p>
-            <a href="https://shop.thebrokenhaloco.com/" class="mt-6 inline-flex text-xs font-bold tracking-[.2em] text-white">OPEN THE SHOP →</a>
-          </article>
-          <article class="rounded-3xl border border-[#00f0ff]/30 bg-[#00f0ff]/[.04] p-7">
-            <div class="text-[10px] font-bold tracking-[.28em] text-[#00f0ff]">USE IT</div>
-            <h3 class="mt-3 font-display text-3xl font-bold tracking-[-.05em]">THE WORK</h3>
-            <p class="mt-3 text-sm leading-relaxed text-white/60">Broken Halo Institute develops identity-centered educational tools for people, counselors, programs, and organizations doing real recovery work.</p>
-            <a href="https://brokenhaloco.org/" class="mt-6 inline-flex text-xs font-bold tracking-[.2em] text-[#00f0ff]">VISIT THE INSTITUTE →</a>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section class="px-5 py-12 sm:px-6" aria-label="Brand statement">
       <div class="mx-auto max-w-4xl text-center">
@@ -307,8 +288,8 @@
         <div>
           <div class="mb-3 text-xs font-bold tracking-[.3em] text-[#00f0ff]">FREE COMPANION WORKSHEET</div>
           <h2 class="font-display text-5xl font-bold leading-[.92] tracking-[-.07em] sm:text-6xl">Get the guilt + shame worksheet.</h2>
-          <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/68">Drop your email and get the Broken Halo Guilt + Shame Companion Worksheet immediately. It includes the companion thought prompt, repair vs. punishment work, and evidence-this-week action steps.</p>
-          <div class="mt-6 rounded-2xl border border-white/10 bg-white/[.03] p-5 text-sm leading-relaxed text-white/58"><strong class="text-white">How it works:</strong> your email goes to the Broken Halo list, then the worksheet download appears on the page and should start automatically. No spam. No motivational glitter bomb.</div>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/68">Open the free Broken Halo Guilt + Shame Companion Worksheet. It includes the companion thought prompt, repair vs. punishment work, and evidence-this-week action steps. No signup required.</p>
+          <div class="mt-6 rounded-2xl border border-white/10 bg-white/[.03] p-5 text-sm leading-relaxed text-white/58"><a class="editorial-button" href="downloads/guilt-and-shame-companion.html">OPEN THE FREE WORKSHEET →</a><p class="mt-3">Want to join the Broken Halo email list too? Use the optional signup form.</p></div>
           <div class="mt-6 border-t border-white/10 pt-6"><p class="text-sm leading-relaxed text-white/68">Want more reflection tools? The Broken Halo Companion Workbook covers reframing thoughts, warning signs, triggers, and a spiral interruption plan.</p><a href="https://broken-halo-workbook.notion.site/Broken-Halo-Companion-Workbook-e578820ce6f544c0a92ecffe317897ed" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex justify-center border border-[#00f0ff] px-5 py-3 font-display text-xs font-bold tracking-[.16em] text-[#00f0ff] transition hover:bg-[#00f0ff] hover:text-black">OPEN COMPANION WORKBOOK ↗</a><p class="mt-2 text-xs text-white/45">Opens in Notion. The guilt + shame worksheet is still available separately.</p></div>
         </div>
         <form id="toolsForm" action="https://formspree.io/f/xrewzzen" method="POST" class="relative rounded-[1.7rem] border border-white/10 bg-zinc-950/80 p-6 shadow-2xl">
@@ -321,7 +302,7 @@
           <input type="hidden" name="_subject" value="New Broken Halo Co. signup"/>
           <input type="hidden" name="source" value="thebrokenhaloco.com landing page"/>
           <input type="hidden" name="lead_magnet" value="Guilt + Shame Companion Worksheet"/>
-          <button type="submit" class="mt-5 w-full rounded-2xl bg-white px-5 py-4 font-display text-sm font-bold tracking-[.22em] text-black transition hover:bg-[#00f0ff]">GET FREE WORKSHEET</button>
+          <button type="submit" class="mt-5 w-full rounded-2xl bg-white px-5 py-4 font-display text-sm font-bold tracking-[.22em] text-black transition hover:bg-[#00f0ff]">JOIN THE LIST + OPEN WORKSHEET</button>
           <p class="mt-4 text-center text-[11px] leading-relaxed text-white/38">Built for people rebuilding. <a href="/privacy.html" class="text-white/55 underline decoration-white/20 underline-offset-2 hover:text-[#00f0ff]">Privacy policy</a> · <a href="mailto:support@thebrokenhaloco.com?subject=Unsubscribe%20Broken%20Halo%20Co.%20list" class="text-white/55 underline decoration-white/20 underline-offset-2 hover:text-[#00f0ff]">Unsubscribe anytime</a>. · <a href="downloads/guilt-and-shame-companion.html" target="_blank" rel="noopener" class="text-white/55 underline decoration-white/20 underline-offset-2 hover:text-[#00f0ff]">Open worksheet without signing up</a></p>
           <div id="formMessage" class="mt-4 hidden rounded-2xl border px-4 py-3 text-center text-sm"></div>
           <div id="downloadBox" class="mt-4 hidden rounded-2xl border border-[#00f0ff]/35 bg-[#00f0ff]/10 p-4 text-center">
