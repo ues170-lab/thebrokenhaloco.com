@@ -1,4 +1,4 @@
-:root{--accent:#e6fa35;--cyan:#e6fa35;--pink:#e6fa35;--bg:#080909}
+:root{--accent:#ff2bbd;--cyan:#ff2bbd;--pink:#ff2bbd;--bg:#080909}
 body{background:#080909;color:#f5f5ef}
 .font-display,.editorial-hero h1,.route-copy h2{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:800;letter-spacing:-.025em}
 .halo-glow,.pink-glow{filter:none}
@@ -34,7 +34,7 @@ main .rounded-3xl,main .rounded-2xl,main .rounded-\[1\.7rem\],main .rounded-\[1\
 body [class*='text-[#00f0ff]'],body [class*='text-[#ff2bbd]']{color:var(--accent)}
 body [class*='bg-[#ff2bbd]']:not([class*='/']),body [class*='bg-[#00f0ff]']:not([class*='/']){background-color:var(--accent)}
 body a[class*='bg-[#ff2bbd]']:not([class*='/']),body a[class*='bg-[#00f0ff]']:not([class*='/']){color:#101111}
-body [class*='border-[#00f0ff]'],body [class*='border-[#ff2bbd]']{border-color:#e6fa3566}
+body [class*='border-[#00f0ff]'],body [class*='border-[#ff2bbd]']{border-color:#ff2bbd66}
 a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
 @media(max-width:850px){.editorial-hero{min-height:600px;grid-template-columns:1fr}.editorial-photo{position:absolute;inset:0;min-height:0;height:100%;object-position:64% 35%;opacity:.62}.editorial-hero:after{background:linear-gradient(90deg,#080909ed, #08090955),linear-gradient(0deg,#080909,transparent 55%)}.editorial-copy{padding:70px 24px;max-width:600px}.route-grid{gap:18px}.route-visual{height:240px}.worksheet-sheet{padding:12px}.worksheet-sheet strong{font-size:35px}}
 @media(max-width:600px){#top .editorial-hero h1{font-size:clamp(52px,13vw,78px)}.editorial-hero{min-height:570px}.editorial-kicker{font-size:8px;letter-spacing:.12em}.editorial-copy>p:not(.editorial-kicker){font-size:16px}.editorial-button{font-size:10px;max-width:100%}.route-grid{grid-template-columns:1fr;gap:28px;padding:28px 20px}.route-card{display:grid;grid-template-columns:42% 1fr;gap:20px;align-items:center}.route-visual{height:220px}.route-copy{padding:0}.route-copy h2{font-size:40px}.route-copy p{font-size:12px}.route-copy>a{font-size:9px;line-height:1.7}.worksheet-sheet{width:87%;padding:9px}.worksheet-sheet strong{font-size:28px}.worksheet-sheet>span{font-size:5px}.worksheet-sheet b{font-size:6px}.worksheet-sheet p{font-size:7px}.worksheet-sheet i{height:12px}}
