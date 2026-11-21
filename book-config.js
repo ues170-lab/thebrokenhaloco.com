@@ -4,7 +4,7 @@
 window.BOOK_CONFIG = {
   amazonUrl: "https://www.amazon.com/dp/B0H9G1YHST",
   ebookUrl: "https://www.amazon.com/dp/B0H9JYXPZB",
-  ctaLabel: "BUY NOW",
+  ctaLabel: "BUY PAPERBACK ON AMAZON",
   placeholderText: "PAPERBACK OUT NOW",
   liveBadge: "PAPERBACK OUT NOW"
 };
